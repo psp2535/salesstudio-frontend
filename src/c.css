@@ -1,0 +1,142 @@
+/* General Page Styles */
+/* Unified Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #5e4adb, #8a6be9); 
+    /* Light gradient: soft violet to pastel purple */
+}
+
+/* Centering the content */
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Logo */
+.company-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Coupon Section */
+.coupon-section {
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    color: white; /* Light text */
+}
+
+/* 🎟️ Coupon Box (Dark Green for contrast) */
+.coupon-box {
+    background: linear-gradient(135deg, #004d00, #006600); /* Dark Green Gradient */
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7); /* Stronger shadow for depth */
+}
+
+/* Coupon Box Heading */
+.coupon-box h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* ✨ Coupon Code Styling */
+.coupon-code {
+    font-size: 26px;
+    background: #ffcc00; /* Gold */
+    color: #003300; /* Deep Green */
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    border: 3px dashed #fff;
+    box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.6);
+    }
+    to {
+        box-shadow: 0px 0px 25px rgba(255, 204, 0, 1);
+    }
+}
+
+/* ✨ Additional Styling for Engagement */
+.coupon-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.valid-text {
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 10px;
+    color: #ffdd44;
+}
+
+/* Subtext */
+.subtext {
+    color: #ddd;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Instruction Text */
+.instruction-text {
+    color: #eee;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* ⚠️ Message (Error / Alert) */
+.message {
+    color: #ff4444;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 🎁 Buttons */
+.btn {
+    background: linear-gradient(135deg, #ff7f00, #ff0033);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(255, 99, 99, 0.3);
+}
+
+/* Disabled Button */
+.btn.disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
