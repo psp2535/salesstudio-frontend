@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./c.css";
+import "./style.css";
 import companyLogo from "./assets/image.png"; // Ensure the image is in src/assets/
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api"; 
+const API_URL = "http://localhost:5000/api"; // ✅ Local backend URL
 
 function App() {
   const [coupon, setCoupon] = useState(null);
@@ -46,21 +46,20 @@ function App() {
 
       <div className="coupon-section">
         <h1>🎟️ Claim Your Coupon</h1>
-        <p className="subtext">Exclusive discount – 1 per hour</p>
+        <p className="subtext">Exclusive discount – 1 for every hour</p>
 
         {coupon ? (
-  <div className="coupon-box">
-    <h2>🎉 Congratulations! 🎉</h2>
-    <p className="coupon-text">You've unlocked an exclusive discount!</p>
-    <div className="coupon-code">
-      <span>✨ {coupon} ✨</span>
-    </div>
-    <p className="valid-text">🔥 Use this code at checkout before it expires!</p>
-  </div>
-) : (
-  <p className="instruction-text">Click below to claim your coupon!</p>
-)}
-
+          <div className="coupon-box">
+            <h2>🎉 Congratulations! 🎉</h2>
+            <p className="coupon-text">You've unlocked an exclusive discount!</p>
+            <div className="coupon-code">
+              <span>✨ {coupon} ✨</span>
+            </div>
+            <p className="valid-text">🔥 Use this code at checkout before it expires!</p>
+          </div>
+        ) : (
+          <p className="instruction-text">Click below to claim your coupon!</p>
+        )}
 
         {message && <p className="message">{message}</p>}
 

@@ -1,5 +1,4 @@
 /* General Page Styles */
-/* Unified Background */
 body, html {
     margin: 0;
     padding: 0;
@@ -8,20 +7,23 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #5e4adb, #8a6be9); 
-    /* Light gradient: soft violet to pastel purple */
+    background: linear-gradient(135deg, #0f2027, #648590, #407991); 
+    /* Darker gradient for a premium look */
 }
+
 
 /* Centering the content */
 .container {
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
+    display: flex;
+    flex-direction: column; /* Stack logo and coupon box */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-
 /* Logo */
 .company-logo {
-    width: 150px;
+    width: 400px;
+    height: 80px;
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
@@ -30,18 +32,21 @@ body, html {
 
 /* Coupon Section */
 .coupon-section {
-    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
-    width: 100%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    width: 600px;
     text-align: center;
-    color: white; /* Light text */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px; /* Adds space below logo */
 }
 
 /* 🎟️ Coupon Box (Dark Green for contrast) */
 .coupon-box {
-    background: linear-gradient(135deg, #004d00, #006600); /* Dark Green Gradient */
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Deep Blue Gradient */
     padding: 25px;
     border-radius: 12px;
     margin-bottom: 20px;
@@ -61,24 +66,24 @@ body, html {
 /* ✨ Coupon Code Styling */
 .coupon-code {
     font-size: 26px;
-    background: #ffcc00; /* Gold */
-    color: #003300; /* Deep Green */
+    background: #f8b400; /* Warm Yellow */
+    color: #1e1e1e; /* Dark Gray */
     padding: 15px;
     border-radius: 10px;
     display: inline-block;
     margin-top: 10px;
     letter-spacing: 3px;
-    border: 3px dashed #fff;
-    box-shadow: 0px 0px 20px rgba(255, 204, 0, 0.8);
+    border: 3px dashed #ffffff;
+    box-shadow: 0px 0px 20px rgba(248, 180, 0, 0.8);
     animation: glow 1.5s infinite alternate;
 }
 
 @keyframes glow {
     from {
-        box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.6);
+        box-shadow: 0px 0px 15px rgba(248, 180, 0, 0.6);
     }
     to {
-        box-shadow: 0px 0px 25px rgba(255, 204, 0, 1);
+        box-shadow: 0px 0px 25px rgba(248, 180, 0, 1);
     }
 }
 
@@ -98,7 +103,7 @@ body, html {
 
 /* Subtext */
 .subtext {
-    color: #ddd;
+    color: #d1e8ff; /* Light Blue */
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
@@ -106,21 +111,21 @@ body, html {
 
 /* Instruction Text */
 .instruction-text {
-    color: #eee;
+    color: #e3f2fd;
     font-size: 16px;
     margin-bottom: 15px;
 }
 
 /* ⚠️ Message (Error / Alert) */
 .message {
-    color: #ff4444;
+    color: #ff4b5c;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
 /* 🎁 Buttons */
 .btn {
-    background: linear-gradient(135deg, #ff7f00, #ff0033);
+    background: linear-gradient(135deg, #ff4b2b, #ff416c); /* Coral Pink to Red */
     color: white;
     border: none;
     padding: 12px 20px;
@@ -132,11 +137,11 @@ body, html {
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(255, 99, 99, 0.3);
+    box-shadow: 0px 4px 15px rgba(255, 65, 108, 0.3);
 }
 
 /* Disabled Button */
 .btn.disabled {
-    background-color: #666;
+    background-color: #7a7a7a;
     cursor: not-allowed;
 }
