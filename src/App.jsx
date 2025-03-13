@@ -3,7 +3,7 @@ import axios from "axios";
 import "./style.css";
 import companyLogo from "./assets/image.png"; // Ensure the image is in src/assets/
 
-const API_URL = "http://localhost:5000/api"; // ✅ Local backend URL
+const API_URL = "https://salesstudio-frontend.vercel.app/"; // ✅ Local backend URL
 
 function App() {
   const [coupon, setCoupon] = useState(null);
